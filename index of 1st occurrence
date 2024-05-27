@@ -1,0 +1,17 @@
+int strStr(char* haystack, char* needle) {
+    int l = strlen(haystack);
+    int w=strlen(needle);
+    // char * r;
+    // r=strstr(haystack, needle);
+    if(w==0){
+        return 0;
+    }
+    for(int i=0;i<=l-w;i++){
+    if(strncmp((haystack+i),needle,w)==0)
+    {
+       return i;
+    }
+}
+       return -1;
+    
+}
